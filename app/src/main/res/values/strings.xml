@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HHMenu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorite_text">Избранное</string>
+    <string name="response_btn_txt">Откликнуться</string>
+    <string name="hint_search">Должность, ключевые слова</string>
+    <string name="plug_txt">Заглушка</string>
+</resources>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:backgroundTint="@color/black_grey"
+    android:layout_marginBottom="8dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Иконка "Избранное" -->
+        <ImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_fav_empty"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Количество просмотров -->
+        <TextView
+            android:id="@+id/tvLookingNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            tools:text = "Сейчас просматривает 1 человек"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Заголовок вакансии -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text = "UI/UX Designer"
+            app:layout_constraintTop_toBottomOf="@id/tvLookingNumber"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Город -->
+        <TextView
+            android:id="@+id/tvTown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:text="Минск"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Название компании -->
+        <TextView
+            android:id="@+id/tvCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:text="Мотосервис"
+            app:layout_constraintTop_toBottomOf="@id/tvTown"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Иконка проверенности компании -->
+        <ImageView
+            android:id="@+id/ivVerified"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_verified"
+            app:layout_constraintTop_toTopOf="@id/tvCompany"
+            app:layout_constraintBottom_toBottomOf="@id/tvCompany"
+            app:layout_constraintStart_toEndOf="@id/tvCompany" />
+
+        <!-- Опыт работы -->
+        <LinearLayout
+            android:id="@+id/llExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCompany"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_portfolio"/>
+
+            <TextView
+                android:id="@+id/tvExperience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/white"
+                tools:text="Опыт от 1 года до 3 лет"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Дата публикации -->
+        <TextView
+            android:id="@+id/tvPublishedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/grey_2"
+            android:textSize="14sp"
+            tools:text = "Опубликовано 20 февраля"
+            app:layout_constraintTop_toBottomOf="@id/llExperience"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnRespond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            android:text="@string/response_btn_txt"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPublishedDate"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
